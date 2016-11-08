@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilityApp", "MobilityApp.csproj", "{B79C881C-0D50-482E-9584-B368AA06C04B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B79C881C-0D50-482E-9584-B368AA06C04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79C881C-0D50-482E-9584-B368AA06C04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79C881C-0D50-482E-9584-B368AA06C04B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B79C881C-0D50-482E-9584-B368AA06C04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79C881C-0D50-482E-9584-B368AA06C04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79C881C-0D50-482E-9584-B368AA06C04B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
