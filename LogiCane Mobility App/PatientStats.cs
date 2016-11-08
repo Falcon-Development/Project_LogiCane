@@ -12,10 +12,7 @@ using Android.Widget;
 
 namespace AndroidExpandableListView
 {
-    [Activity(Label = "PatientStats",
-                        MainLauncher = false,
-                        Icon = "@drawable/icon",
-                        Theme = "@style/MyTheme")]
+    [Activity(Label = "PatientStats")]
     public class PatientStats : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -24,8 +21,7 @@ namespace AndroidExpandableListView
 
             // Create your application here
 
-            SetContentView(Resource.Layout.PatientStat);
-
+            /*Hello   oooooooooooo*/
         }
     }
 }
