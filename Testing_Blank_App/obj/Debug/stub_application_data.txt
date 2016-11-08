@@ -1,2 +1,0 @@
-android.app.Application
-Testing_Blank_App.Testing_Blank_App
