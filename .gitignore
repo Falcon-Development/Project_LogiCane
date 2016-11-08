@@ -250,6 +250,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
-
-Testing_Blank_App
+.vs/Testing_Blank_App/
+Testing_Blank_App/
 Testing_Blank_App.sln
