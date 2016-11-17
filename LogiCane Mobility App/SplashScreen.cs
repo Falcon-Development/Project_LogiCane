@@ -22,7 +22,7 @@ namespace SplashScreen
             System.Threading.Thread.Sleep(2000);
 
             // After activity sleep, create the main activity
-            this.StartActivity(typeof(MobilityApp.MainActivity));
+            this.StartActivity(typeof(AndroidExpandableListView.Login));
         }
     }
 }

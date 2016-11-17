@@ -85,8 +85,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.cs" />
     <Compile Include="PatientSelection.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PatientStats.cs" />
     <Compile Include="PatientVisit.cs" />
     <Compile Include="PatientVisitData.cs" />
     <Compile Include="PatientVisitInital.cs" />
@@ -95,6 +97,9 @@
     <Compile Include="SplashScreen.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\LoginLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />

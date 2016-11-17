@@ -23,7 +23,7 @@ namespace AndroidPatientVisitData
         }
         public string getPatientVisitData()
         {
-            return date + " \t " + visitnum;
+            return visitnum + " \t\t\t\t\t ------  " +  date;
         }
     }
 }
