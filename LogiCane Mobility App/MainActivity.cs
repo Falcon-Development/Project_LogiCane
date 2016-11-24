@@ -11,8 +11,8 @@ namespace MobilityApp
     [Activity(Label =  "LogiCane Mobility App", 
                         MainLauncher    = false, 
                         Icon            = "@drawable/icon",
-                        Theme           = "@style/MyTheme")]
-    public class MainActivity : AppCompatActivity
+                         Theme = "@style/MyTheme.Base")]
+    public class MainActivity : Activity
     {
         // Adapter creation for expandable list view of patients
         PatientViewAdapter patientExListViewAdapter;
@@ -26,9 +26,9 @@ namespace MobilityApp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "Patient Selection";
+         //  var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+         //   SetSupportActionBar(toolbar);
+         //   SupportActionBar.Title = "Patient Selection";
             expandableListView = FindViewById<ExpandableListView>(Resource.Id.expandableListView);
 
             // Set Data
@@ -38,7 +38,7 @@ namespace MobilityApp
             // Popup text for patient selection verification
             expandableListView.ChildClick += (s, e) => 
             {
-                var nextPage = new Intent(this, typeof(PatientVisitInital));
+                var nextPage = new Intent(this, typeof(PatientVisit));
                 StartActivity(nextPage);
                 //Toast.
                 //MakeText(this, "You have selected " /* Patient Name */ 
