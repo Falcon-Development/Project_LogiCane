@@ -14,11 +14,13 @@
         android:layout_width="match_parent"
         android:layout_weight="50"
         android:layout_height="match_parent"
-        android:id="@+id/txtDate" />
+        android:id="@+id/txtDate" 
+        android:textSize="35dp"/>
     <TextView
         android:text="Patient ID"
         android:layout_width="match_parent"
         android:layout_weight="50"
         android:layout_height="match_parent"
-        android:id="@+id/txtPID" />
+        android:id="@+id/txtPID"
+        android:textSize="35dp"/>
 </LinearLayout>

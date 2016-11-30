@@ -1768,9 +1768,6 @@ namespace AndroidExpandableListView
 			// aapt resource value: 0x7f0d0021
 			public const int beginning = 2131558433;
 			
-			// aapt resource value: 0x7f0d0077
-			public const int blog = 2131558519;
-			
 			// aapt resource value: 0x7f0d0033
 			public const int buttonPanel = 2131558451;
 			
@@ -1915,9 +1912,6 @@ namespace AndroidExpandableListView
 			// aapt resource value: 0x7f0d0043
 			public const int radio = 2131558467;
 			
-			// aapt resource value: 0x7f0d0076
-			public const int report = 2131558518;
-			
 			// aapt resource value: 0x7f0d001d
 			public const int screen = 2131558429;
 			
@@ -2049,12 +2043,6 @@ namespace AndroidExpandableListView
 			
 			// aapt resource value: 0x7f0d001a
 			public const int useLogo = 2131558426;
-			
-			// aapt resource value: 0x7f0d0075
-			public const int viewGithub = 2131558517;
-			
-			// aapt resource value: 0x7f0d0078
-			public const int website = 2131558520;
 			
 			// aapt resource value: 0x7f0d000e
 			public const int wide = 2131558414;
@@ -2247,22 +2235,6 @@ namespace AndroidExpandableListView
 			}
 			
 			private Layout()
-			{
-			}
-		}
-		
-		public partial class Menu
-		{
-			
-			// aapt resource value: 0x7f0e0000
-			public const int main = 2131623936;
-			
-			static Menu()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Menu()
 			{
 			}
 		}

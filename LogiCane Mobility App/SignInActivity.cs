@@ -1,3 +1,10 @@
+/*
+    Modified by : Max and Pooja Mohite
+    Date        : 11/21/2016
+    Description : This page helps in connecting to google and login into app using gmail credetials. It also displays three buttons - Signout, Disconnect 
+                  and Move ahead. Depending on Patient/Therapist next page is displayed.
+*/
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,15 +48,15 @@ namespace AndroidExpandableListView
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
+            // Layout .axml page is mapped here
             SetContentView(Resource.Layout.sign_layout);
-           
+           // che ks for saved instance
             if (savedInstanceState != null)
             {
                 mIsResolving = savedInstanceState.GetBoolean(KEY_IS_RESOLVING);
                 mShouldResolve = savedInstanceState.GetBoolean(KEY_SHOULD_RESOLVE);
             }
-
+            // gets the references to layout elements
             FindViewById(Resource.Id.sign_in_button).SetOnClickListener(this);
             FindViewById(Resource.Id.sign_out_button).SetOnClickListener(this);
             FindViewById(Resource.Id.disconnect_button).SetOnClickListener(this);
@@ -58,7 +65,7 @@ namespace AndroidExpandableListView
             FindViewById(Resource.Id.sign_in_button).Enabled = false;
 
             mStatus = FindViewById<TextView>(Resource.Id.status);
-
+            // setting up properties to connect to Google
             mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .AddConnectionCallbacks(this)
                 .AddOnConnectionFailedListener(this)
@@ -72,28 +79,22 @@ namespace AndroidExpandableListView
                 {
                     Toast.MakeText(this, "Incorrect Username Password Combination", ToastLength.Short).Show();
                 }
-               StartActivity(typeof(MainActivity));
+                //Call API to evaluate a patient/therapist and get the isPatient value.
+                //Get isPatient from the user
+                //if (isPatient == 0)
+                {
+                    StartActivity(typeof(MainActivity));
+                }
+                //else
+                {
+                //    StartActivity(typeof(PatientVisit));
+                }
             }; 
 
         }
-      /*  void tryLogin(object sender, EventArgs e)
-        {
-            //Toast.MakeText(this, "Incorrect Username Password Combination", ToastLength.Short).Show();
-               Intent nextPage = new Intent(this, typeof(MainActivity));
-
-            if (nextPage==null)
-            {
-                Toast.MakeText(this, "Incorrect Username Password Combination", ToastLength.Short).Show();
-            }
-            //  StartActivity(nextPage);
-            //            this.StartActivity(typeof(MobilityApp.MainActivity));
-
-
-
-        }
-        */
+      
         void UpdateUI(bool isSignedIn)
-        {
+        {// updating the styles of UI according to user's status, siged in or not
             if (isSignedIn)
             {
                 var person = PlusClass.PeopleApi.GetCurrentPerson(mGoogleApiClient);
@@ -106,11 +107,10 @@ namespace AndroidExpandableListView
                     email = PlusClass.AccountApi.GetAccountName(mGoogleApiClient); 
                 }
                 mStatus.Text = string.Format(GetString(Resource.String.signed_in_fmt), name);
-
+                // changing the visibility of some of the layout objects that were hidden as user was not signed in
                 FindViewById(Resource.Id.sign_in_button).Visibility = ViewStates.Gone;
                 FindViewById(Resource.Id.sign_out_and_disconnect).Visibility = ViewStates.Visible;
                 FindViewById(Resource.Id.moveinout).Visibility = ViewStates.Visible;
-                // puja
                 FindViewById(Resource.Id.move_ahead).Visibility = ViewStates.Visible;
                 // API .. check if patient or therapist (gettype(emailid))
                                
@@ -126,7 +126,7 @@ namespace AndroidExpandableListView
         }
 
         protected override void OnStart()
-        {
+        {// this method is called on every start 
             base.OnStart();
             mGoogleApiClient.Connect();
         }
@@ -235,6 +235,7 @@ namespace AndroidExpandableListView
 
         public async void OnClick(View v)
         {
+            // evernt hander for each of button SignIn SignOut and Disconnect
             switch (v.Id)
             {
                 case Resource.Id.sign_in_button:

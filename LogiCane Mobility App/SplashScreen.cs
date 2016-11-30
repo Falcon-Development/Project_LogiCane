@@ -1,3 +1,9 @@
+/*
+    Author      : Jeff Bryant
+    Modified by : Pooja Mohite
+    Date        : 10/27/2016
+    Description : This page launches the app with splashing of App LOGO and connects to signinactivity page.
+*/
 using Android.App;
 using Android.OS;
 using Android.Media;
@@ -22,6 +28,7 @@ namespace SplashScreen
             System.Threading.Thread.Sleep(2000);
 
             // After activity sleep, create the main activity
+            // Start the next page
             this.StartActivity(typeof(SignInActivity));
         }
     }
