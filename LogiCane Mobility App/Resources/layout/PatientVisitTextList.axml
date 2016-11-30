@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="30px"
+    android:minWidth="30px"
+    android:paddingLeft="5dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:weightSum="100">
+    <TextView
+        android:text="Date"
+        android:layout_width="match_parent"
+        android:layout_weight="50"
+        android:layout_height="match_parent"
+        android:id="@+id/txtDate" 
+        android:textSize="35dp"/>
+    <TextView
+        android:text="Patient ID"
+        android:layout_width="match_parent"
+        android:layout_weight="50"
+        android:layout_height="match_parent"
+        android:id="@+id/txtPID"
+        android:textSize="35dp"/>
+</LinearLayout>

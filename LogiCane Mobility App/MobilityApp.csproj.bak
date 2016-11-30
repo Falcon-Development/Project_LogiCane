@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -104,6 +104,7 @@
     <Compile Include="PateintVisitListView.cs" />
     <Compile Include="PatientSelection.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PatientStats.cs" />
     <Compile Include="PatientVisit.cs" />
     <Compile Include="PatientVisitTextData.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
